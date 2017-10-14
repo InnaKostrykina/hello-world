@@ -1,11 +1,6 @@
 pipeline {
     agent any
 
-    environment {
-        PATH = "D:/Program Files/Docker Toolbox:$PATH"
-    }
-
-
     stages {
         stage('Package') {
             steps {
@@ -15,7 +10,7 @@ pipeline {
         stage('Create Docker Image') {
             steps {
                 script {
-                    bat 'docker build -t test-hello-world .'
+                    bat "'D:/Program Files/Docker Toolbox/docker' build -t test-hello-world ."
                 }
             }
         }
