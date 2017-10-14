@@ -9,7 +9,7 @@ pipeline {
         }
         stage('Create Docker Image') {
             steps {
-                docker.build("test-hello-world")
+                docker.build("test-hello-world2")
             }
         }
         stage ('Run Application') {
