@@ -9,7 +9,7 @@ pipeline {
         }
         stage('Create Docker Image') {
             steps {
-                   bat '@FOR /f "usebackq" "tokens=*" %i IN (''docker-machine env --shell cmd default'') DO @%i'
+                   bat '@FOR /f "usebackq" "tokens=*" %i IN ('docker-machine env --shell cmd default') DO @%i'
                    bat '"D:/Program Files/Docker Toolbox/docker" build -t test-hello-world .'
             }
         }
