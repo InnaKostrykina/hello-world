@@ -9,7 +9,7 @@ pipeline {
         }
         stage('Create Docker Image') {
             steps {
-                docker.build("test-hello-world2")
+                bat 'docker build -t test-hello-world .'
             }
         }
         stage ('Run Application') {
