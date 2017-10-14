@@ -10,7 +10,7 @@ pipeline {
         stage('Create Docker Image') {
             steps {
                 script {
-                    bat "'D:/Program Files/Docker Toolbox/docker' build -t test-hello-world ."
+                    bat '"D:/Program Files/Docker Toolbox/docker" build -t test-hello-world .'
                 }
             }
         }
