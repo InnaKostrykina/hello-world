@@ -9,10 +9,8 @@ pipeline {
         }
         stage('Create Docker Image') {
             steps {
-                script {
-                    bat '@FOR /f "tokens=*" %i IN (''docker-machine env --shell cmd default'') DO @%i'
-                    bat '"D:/Program Files/Docker Toolbox/docker" build -t test-hello-world .'
-                }
+                   bat '@FOR /f "tokens=*" %i IN (''docker-machine env --shell cmd default'') DO @%i'
+                   bat '"D:/Program Files/Docker Toolbox/docker" build -t test-hello-world .'
             }
         }
         stage ('Run Application') {
