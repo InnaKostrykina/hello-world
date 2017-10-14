@@ -10,7 +10,7 @@ pipeline {
         stage('Create Docker Image') {
             steps {
                 script {
-                    docker.build("test-hello-world")
+                    bat 'docker build -t test-hello-world .'
                 }
             }
         }
