@@ -1,6 +1,10 @@
 pipeline {
-    env.PATH = "D:/Program Files/Docker Toolbox"
     agent any
+
+    environment {
+        PATH = "D:/Program Files/Docker Toolbox"
+    }
+
 
     stages {
         stage('Package') {
