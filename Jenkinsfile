@@ -2,7 +2,7 @@ pipeline {
     agent any
 
     environment {
-        PATH = "D:/Program Files/Docker Toolbox"
+        PATH = "D:/Program Files/Docker Toolbox:$PATH"
     }
 
 
