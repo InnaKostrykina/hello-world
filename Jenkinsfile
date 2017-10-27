@@ -15,7 +15,7 @@ pipeline {
         stage ('Run Application') {
             steps {
                  // Run application using Docker image
-                 sh 'sudo docker run -p 4000:8080 test-hello-world'
+                 sh 'sudo docker run -d -p 4000:8080 test-hello-world'
             }
         }
         stage('Run Test'){
