@@ -9,13 +9,13 @@ pipeline {
         }
         stage('Create Docker Image') {
             steps {
-                   sh 'docker build -t test-hello-world .'
+                   sh 'sudo docker build -t test-hello-world .'
             }
         }
         stage ('Run Application') {
             steps {
                  // Run application using Docker image
-                 sh 'docker run -p 4000:8080 test-hello-world'
+                 sh 'sudo docker run -p 4000:8080 test-hello-world'
             }
         }
         stage('Run Test'){
